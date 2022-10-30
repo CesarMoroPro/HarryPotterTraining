@@ -1,0 +1,24 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "🇫🇷 Projet d'entrainement Front-end, axé sur l'utilisation de jQuery principalement. 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Front-end training project, based on jQuery.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sc": "sass  ~/../../Users/cesar/Desktop/projets/02_personnels/01_entrainement/front-end/harry_potter/integration/assets/scss/main.scss ~/../../Users/cesar/Desktop/projets/02_personnels/01_entrainement/front-end/harry_potter/integration/assets/css/main.css",
+    "sw": "sass --watch ./integration/assets/scss:./integration/assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CesarMoroPro/HarryPotterTraining.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CesarMoroPro/HarryPotterTraining/issues"
+  },
+  "homepage": "https://github.com/CesarMoroPro/HarryPotterTraining#readme",
+  "dependencies": {
+    "reset.css": "^2.0.2"
+  }
+}

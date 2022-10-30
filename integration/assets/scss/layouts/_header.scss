@@ -1,0 +1,16 @@
+#div-header {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#castle-header-img{
+    width: 100%;
+    object-fit: fill;
+}
+
+#harry-potter-letters-header-img {
+    width: 40%;
+}
