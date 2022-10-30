@@ -1,0 +1,25 @@
+.hide {
+  display: none;
+}
+
+#background-color-site {
+  background-color: rgba(1, 7, 44, 0.82);
+}
+
+#div-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#castle-header-img {
+  width: 100%;
+  object-fit: fill;
+}
+
+#harry-potter-letters-header-img {
+  width: 40%;
+}
+
+/*# sourceMappingURL=main.css.map */
