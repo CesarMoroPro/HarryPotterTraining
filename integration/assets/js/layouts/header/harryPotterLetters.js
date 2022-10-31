@@ -1,5 +1,9 @@
 //! STEP 2 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 //^ Je déclare la fonction init()
+
+import { apparitionText } from "../../utils/variables.js";
+import { apparitionBackground } from "../../utils/variables.js";
+
 export function init() {
 
     //! STEP 3 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -8,23 +12,29 @@ export function init() {
     (function ouverture() {
 
         //^ J'appelle la fonction harryPotterLettersFadeIn()
-        harryPotterLettersFadeIn();
-        
+        harryPotterIntroFadeIn();
     })();
 
+    //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     //^ Je déclare la fonction harryPotterLettersFadeIn()
-    // Elle fait apparaître le "logo textuel" Harry Potter
-    // L'apparition prend 7 secondes
-    function harryPotterLettersFadeIn() {
-        let harryPotterLetters = $('#harry-potter-letters-header-img');
-        harryPotterLetters.fadeIn(7000);
+    // Elle fait apparaître le "logo textuel" Harry Potter et la div flash en fond
+    function harryPotterIntroFadeIn() {
+        
+        // L'apparition Harry Potter dure 7 secondes
+        let harryPotterLetters  = $('#harry-potter-letters-header-img');
+        harryPotterLetters.fadeIn(apparitionText); // Variable importée
+
+        // L'apparition de la div flash dure 10 secondes
+        let blurBackground      = $('#div-flash-header');
+        blurBackground.fadeIn(apparitionBackground); // Variable importée
+
+        // Après que l'apparition Harry Potter soit terminée, le slogan commence son apparition 
+        setTimeout(() => {
+            let slogan = $('#slogan');
+            slogan.fadeIn(apparitionText); // Variable importée
+        }, apparitionText);
     }
     
-
-
-
-
-
 }
 
 //! STEP 1 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
