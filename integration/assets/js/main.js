@@ -1,2 +1,3 @@
 //= Import des layouts
-import './layouts/header/harryPotterLetters.js';
+import './layouts/header/dragonOnTheCastle.js'; // TODO : créer l'animation complète
+import './layouts/header/titleAndDuel.js';

@@ -3,6 +3,7 @@
 
 import { apparitionText } from "../../utils/variables.js";
 import { apparitionBackground } from "../../utils/variables.js";
+import { apparitionProfils } from "../../utils/variables.js";
 
 export function init() {
 
@@ -28,10 +29,16 @@ export function init() {
         let blurBackground      = $('#div-flash-header');
         blurBackground.fadeIn(apparitionBackground); // Variable importée
 
-        // Après que l'apparition Harry Potter soit terminée, le slogan commence son apparition 
+        /** Après que l'apparition Harry Potter soit terminée
+         *  le slogan et le face à face Voldemort vs Harry
+         *  commencent leur apparition. 
+         * */
         setTimeout(() => {
-            let slogan = $('#slogan');
+            let slogan = $('#slogan-header');
             slogan.fadeIn(apparitionText); // Variable importée
+
+            let profilsDuelDiv = $('#div-profils-duel-header');
+            profilsDuelDiv.fadeIn(apparitionProfils);
         }, apparitionText);
     }
     
