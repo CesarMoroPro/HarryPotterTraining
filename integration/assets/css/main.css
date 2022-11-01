@@ -15,18 +15,18 @@ body {
   background-color: rgb(5, 8, 18);
 }
 
-#div-header {
+header {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#div-header #castle-header-img {
+header #castle-header-images #castle-img {
   width: 100%;
   z-index: 2;
   object-fit: fill;
 }
-#div-header #dragon-silh {
+header #castle-header-images #dragon-silhouette {
   width: 12%;
   z-index: 3;
   position: absolute;
@@ -34,17 +34,18 @@ body {
   right: 60px;
   transform: rotate(-30deg);
 }
-#div-header #main-bloc-header {
+header #main-bloc-header {
   width: 100%;
   height: 270px;
+  position: relative;
 }
-#div-header #main-bloc-header #div-title-header {
+header #main-bloc-header #div-title-header {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#div-header #main-bloc-header #div-title-header #div-flash-header {
+header #main-bloc-header #div-title-header #div-flash-header {
   width: 180px;
   height: 100px;
   border-radius: 60px;
@@ -54,13 +55,13 @@ body {
   position: relative;
   top: 30px;
 }
-#div-header #main-bloc-header #div-title-header #harry-potter-letters-header-img {
+header #main-bloc-header #div-title-header #harry-potter-letters-header-img {
   width: 300px;
   z-index: 2;
   position: relative;
   top: -90px;
 }
-#div-header #main-bloc-header #div-title-header #slogan-header {
+header #main-bloc-header #div-title-header #slogan-header {
   font-family: "Cinzel Decorative";
   font-size: 0.75rem;
   color: #FFFFFF;
@@ -70,17 +71,19 @@ body {
   left: 40px;
   transform: rotate(-3deg);
 }
-#div-header #main-bloc-header #div-profils-duel-header {
+header #main-bloc-header #div-profils-duel-header {
   margin-bottom: 10px;
   position: relative;
   top: -280px;
   z-index: 1;
   opacity: 0.75;
 }
-#div-header #main-bloc-header #div-profils-duel-header #voldemort-profil-header {
-  width: 22%;
+header #main-bloc-header #div-profils-duel-header #voldemort-profil-header {
+  width: 23%;
+  position: absolute;
+  top: -3px;
 }
-#div-header #main-bloc-header #div-profils-duel-header #harry-profil-header {
+header #main-bloc-header #div-profils-duel-header #harry-profil-header {
   width: 25%;
   position: absolute;
   right: 0px;

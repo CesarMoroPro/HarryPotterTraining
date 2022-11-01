@@ -1,10 +1,9 @@
+//! STEP À LA DEMANDE
+//^ J'importe les variables réutilisables définies dans le fichier Utils/variables.js
+import { apparitionText, apparitionBackground, apparitionProfils } from "../../utils/variables.js";
+
 //! STEP 2 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 //^ Je déclare la fonction init()
-
-import { apparitionText } from "../../utils/variables.js";
-import { apparitionBackground } from "../../utils/variables.js";
-import { apparitionProfils } from "../../utils/variables.js";
-
 export function init() {
 
     //! STEP 3 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -41,6 +40,9 @@ export function init() {
             profilsDuelDiv.fadeIn(apparitionProfils);
         }, apparitionText);
     }
+
+    //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+    //^ La suite se passe dans le fichier js/layouts/header/upTitleOnCastle.js
     
 }
 
