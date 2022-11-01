@@ -1,8 +1,10 @@
-// TODO : dans la fonction upTitle(), l'animation de divMainBlocHeader ne fonctionne pas comme voulu
+// TODO : FIX : 
+// TODO : Le bloc divMainBlocHeader se déplace correctement
+// TODO : mais ne reste pas en position si on change la taille de l'écran
 
 //! STEP À LA DEMANDE
 //^ J'importe les variables réutilisables définies dans le fichier Utils/variables.js
-import { beforeGoUpTitleOnCastle, slidingTransition } from "../../utils/variables.js";
+import { durationBeforeGoUpTitleOnCastle, durationSlidingTransition } from "../../utils/variables.js";
 //^ J'importe le fichier 'vanillaFunctions.js'
 import { vanillaSlideUpMultiple } from "../../utils/vanillaFunctions.js";
 
@@ -15,7 +17,7 @@ export function init() {
     // Cette fonction upMainBlocHeader() sera déclenchée après un délai de 
     // goUpTitleOnCastle défini dans le fichier js des variables
     // soit lorsque les animations d'ouverture définies dans le fichier titleAndDuel.js seront terminées
-    setTimeout(upMainBlocHeader, beforeGoUpTitleOnCastle); //variables importées
+    setTimeout(upMainBlocHeader, durationBeforeGoUpTitleOnCastle); //variables importées
 
     //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     //^ Je déclare la fonction upMainBlocHeader()
@@ -26,7 +28,7 @@ export function init() {
         //* J'applique une animation pour la rendre transparante
         divCastleImages.animate({
             opacity: '0.10'
-        }, slidingTransition);
+        }, durationSlidingTransition);
 
         //* Je récupère la div contenant le bloc de titre et le bloc de duel
         // div qui sera glissée vers le haut, au-dessus de la div image chateau
@@ -48,7 +50,11 @@ export function init() {
          * 
          * J'insère cette fonction dans un setTimeout
          */
-        setTimeout(vanillaSlideUpMultiple(divMainBlocHeader, slidingTransition, hauteurDivCastleImages), beforeGoUpTitleOnCastle);
+        setTimeout(vanillaSlideUpMultiple(divMainBlocHeader, durationSlidingTransition, hauteurDivCastleImages), durationBeforeGoUpTitleOnCastle);
+        setTimeout(() => {
+            console.log(divMainBlocHeader.css('position'));
+            //divMainBlocHeader.addClass('fixedPosition');
+        }, durationBeforeGoUpTitleOnCastle + durationSlidingTransition);
     }
 }
 

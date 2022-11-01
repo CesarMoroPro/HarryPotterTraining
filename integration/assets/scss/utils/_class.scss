@@ -1,10 +1,15 @@
-//! Class relatives à l'apparition vs massquage
+//! HIDE OR SHOW
 .hide {
     display: none;
 }
 
-//! Class relatives aux styles de police
+//! FONT-STYLE
 .boldita {
     font-weight: 900;
     font-style: italic;
+}
+
+//! POSITIONS
+.fixedPosition {
+    top: 0px;
 }

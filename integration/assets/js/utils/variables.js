@@ -1,5 +1,5 @@
-export let apparitionText           = 7000; // 7000
-export let apparitionBackground     = 8000; // 8000
-export let apparitionProfils        = 10000; // 10000
-export let beforeGoUpTitleOnCastle  = (apparitionText + apparitionProfils);
-export let slidingTransition        = 5000;
+export let durationApparitionText           = 500; // 7000
+export let durationApparitionBackground     = 500; // 8000
+export let durationApparitionProfils        = 500; // 10000
+export let durationBeforeGoUpTitleOnCastle  = (durationApparitionText + durationApparitionProfils);
+export let durationSlidingTransition        = 5000;

@@ -1,6 +1,6 @@
 //! STEP À LA DEMANDE
 //^ J'importe les variables réutilisables définies dans le fichier Utils/variables.js
-import { apparitionText, apparitionBackground, apparitionProfils } from "../../utils/variables.js";
+import { durationApparitionText, durationApparitionBackground, durationApparitionProfils } from "../../utils/variables.js";
 
 //! STEP 2 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 //^ Je déclare la fonction init()
@@ -22,11 +22,11 @@ export function init() {
         
         // L'apparition Harry Potter dure 7 secondes
         let harryPotterLetters  = $('#harry-potter-letters-header-img');
-        harryPotterLetters.fadeIn(apparitionText); // Variable importée
+        harryPotterLetters.fadeIn(durationApparitionText); // Variable importée
 
         // L'apparition de la div flash dure 10 secondes
         let blurBackground      = $('#div-flash-header');
-        blurBackground.fadeIn(apparitionBackground); // Variable importée
+        blurBackground.fadeIn(durationApparitionBackground); // Variable importée
 
         /** Après que l'apparition Harry Potter soit terminée
          *  le slogan et le face à face Voldemort vs Harry
@@ -34,11 +34,11 @@ export function init() {
          * */
         setTimeout(() => {
             let slogan = $('#slogan-header');
-            slogan.fadeIn(apparitionText); // Variable importée
+            slogan.fadeIn(durationApparitionText); // Variable importée
 
             let profilsDuelDiv = $('#div-profils-duel-header');
-            profilsDuelDiv.fadeIn(apparitionProfils);
-        }, apparitionText);
+            profilsDuelDiv.fadeIn(durationApparitionProfils);
+        }, durationApparitionText);
     }
 
     //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
