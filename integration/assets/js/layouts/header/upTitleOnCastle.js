@@ -1,7 +1,3 @@
-// TODO : FIX : 
-// TODO : Le bloc divMainBlocHeader se déplace correctement
-// TODO : mais ne reste pas en position si on change la taille de l'écran
-
 //! STEP À LA DEMANDE
 //^ J'importe les variables réutilisables définies dans le fichier Utils/variables.js
 import { durationBeforeGoUpTitleOnCastle, durationSlidingTransition } from "../../utils/variables.js";
@@ -52,8 +48,6 @@ export function init() {
          */
         setTimeout(vanillaSlideUpMultiple(divMainBlocHeader, durationSlidingTransition, hauteurDivCastleImages), durationBeforeGoUpTitleOnCastle);
         setTimeout(() => {
-            // Je récupère la hauteur de l'élément divMainBlocHeader
-            let hauteurDivMainBlocHeader = divMainBlocHeader[0].offsetHeight;
             // Je supprime la classe 'p-relative' de ce bloc et j'ajoute 'p-absolute'
             divMainBlocHeader.removeClass('p-relative');
             divMainBlocHeader.addClass('p-absolute');
