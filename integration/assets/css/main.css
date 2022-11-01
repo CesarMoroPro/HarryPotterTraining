@@ -7,8 +7,12 @@
   font-style: italic;
 }
 
-.fixedPosition {
-  top: 0px;
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
 }
 
 body {
@@ -41,7 +45,6 @@ header #castle-header-images #dragon-silhouette {
 header #main-bloc-header {
   width: 100%;
   height: 270px;
-  position: relative;
 }
 header #main-bloc-header #div-title-header {
   width: 100%;

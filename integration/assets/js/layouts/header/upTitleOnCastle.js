@@ -41,7 +41,7 @@ export function init() {
          * conole.log(divCastleImages) renvoie "S.fn.init [div#castle-header-images]", soit un tableau
          * il faut donc parcourir le tableau à l'index désiré pour manipuler les données
          * */ 
-        let hauteurDivCastleImages = divCastleImages[0].offsetHeight + 'px';
+        let hauteurDivCastleImages = divCastleImages[0].offsetHeight;
         /**
          * J'applique une animation pour faire glisser l'élément sans en masquer un autre 
          * J'utilise une fonction custom en Vanilla définie dans le fichier js/utils/vanillaFunctions.js
@@ -52,8 +52,13 @@ export function init() {
          */
         setTimeout(vanillaSlideUpMultiple(divMainBlocHeader, durationSlidingTransition, hauteurDivCastleImages), durationBeforeGoUpTitleOnCastle);
         setTimeout(() => {
-            console.log(divMainBlocHeader.css('position'));
-            //divMainBlocHeader.addClass('fixedPosition');
+            // Je récupère la hauteur de l'élément divMainBlocHeader
+            let hauteurDivMainBlocHeader = divMainBlocHeader[0].offsetHeight;
+            // Je supprime la classe 'p-relative' de ce bloc et j'ajoute 'p-absolute'
+            divMainBlocHeader.removeClass('p-relative');
+            divMainBlocHeader.addClass('p-absolute');
+            // Je fourni la valeur de la propriété 'top' de la position absolue
+            divMainBlocHeader.css('top', hauteurDivCastleImages + 'px');
         }, durationBeforeGoUpTitleOnCastle + durationSlidingTransition);
     }
 }

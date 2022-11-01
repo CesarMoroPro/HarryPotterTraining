@@ -10,6 +10,10 @@
 }
 
 //! POSITIONS
-.fixedPosition {
-    top: 0px;
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
 }

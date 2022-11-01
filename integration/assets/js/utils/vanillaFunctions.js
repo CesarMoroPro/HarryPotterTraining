@@ -9,6 +9,6 @@ export function vanillaSlideUpMultiple(elementList, duration, heightElementList 
      */
     for (const element of elementList) {
         element.style.transitionDuration        = duration/1000 + 's';
-        element.style.transform                 = 'translateY(-' + heightElementList + ')';
+        element.style.transform                 = 'translateY(-' + heightElementList + 'px)';
     }
 }
