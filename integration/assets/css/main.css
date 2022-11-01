@@ -38,8 +38,8 @@ header #castle-header-images #dragon-silhouette {
   width: 12%;
   z-index: 3;
   position: absolute;
-  top: 35px;
-  right: 60px;
+  top: 140px;
+  right: -1000px;
   transform: rotate(-30deg);
 }
 header #main-bloc-header {
