@@ -1,12 +1,12 @@
-//! STEP À LA DEMANDE
+//! STEP 2 = = = = = = = = = = = IMPORTS = = = = = = = = = = = 
 //^ J'importe les variables réutilisables définies dans le fichier Utils/variables.js
-import { durationApparitionText, durationApparitionBackground, durationApparitionProfils } from "../../utils/variables.js";
+import { durationApparitionText, durationApparitionBackground, durationApparitionProfils } from "../../utils/variables/durationVariables.js";
 
-//! STEP 2 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+//! STEP 3 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 //^ Je déclare la fonction init()
 export function init() {
 
-    //! STEP 3 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+    //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     //^ Je déclare la fonction ouverture() qui s'auto-appelle
     // Elle déclenchera d'autres fonctions afin d'avoir des fonctions synchrones
     (function ouverture() {
@@ -15,7 +15,7 @@ export function init() {
         harryPotterIntroFadeIn();
     })();
 
-    //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+    //! STEP 5 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     //^ Je déclare la fonction harryPotterLettersFadeIn()
     // Elle fait apparaître le "logo textuel" Harry Potter et la div flash en fond
     function harryPotterIntroFadeIn() {
@@ -41,7 +41,7 @@ export function init() {
         }, durationApparitionText);
     }
 
-    //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+    //! STEP 6 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     //^ La suite se passe dans le fichier js/layouts/header/upTitleOnCastle.js
     
 }

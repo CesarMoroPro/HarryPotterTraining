@@ -1,21 +1,21 @@
-//! STEP À LA DEMANDE
+//! STEP 2 = = = = = = = = = = = IMPORTS = = = = = = = = = = = 
 //^ J'importe les variables réutilisables définies dans le fichier Utils/variables.js
-import { durationBeforeGoUpTitleOnCastle, durationSlidingTransition } from "../../utils/variables.js";
+import { durationBeforeGoUpTitleOnCastle, durationSlidingTransition } from "../../utils/variables/durationVariables.js";
 //^ J'importe le fichier 'vanillaFunctions.js'
-import { vanillaSlideUpMultiple } from "../../utils/vanillaFunctions.js";
+import { vanillaSlideUpMultiple } from "../../utils/vanillaFunctions/vanillaSlide.js";
 
-//! STEP 2 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+//! STEP 3 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 //^ Je déclare la fonction init()
 export function init() {
     
-    //! STEP 3 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+    //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     //^ J'utilise un setTimeout pour déclencher la fonction upMainBlocHeader()
     // Cette fonction upMainBlocHeader() sera déclenchée après un délai de 
-    // goUpTitleOnCastle défini dans le fichier js des variables
-    // soit lorsque les animations d'ouverture définies dans le fichier titleAndDuel.js seront terminées
+    // ...goUpTitleOnCastle défini dans le fichier js des variables
+    // ...soit lorsque les animations d'ouverture définies dans le fichier titleAndDuel.js seront terminées
     setTimeout(upMainBlocHeader, durationBeforeGoUpTitleOnCastle); //variables importées
 
-    //! STEP 4 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+    //! STEP 5 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     //^ Je déclare la fonction upMainBlocHeader()
     function upMainBlocHeader() {
 
@@ -27,22 +27,22 @@ export function init() {
         }, durationSlidingTransition);
 
         //* Je récupère la div contenant le bloc de titre et le bloc de duel
-        // div qui sera glissée vers le haut, au-dessus de la div image chateau
+        // ...div qui sera glissée vers le haut, au-dessus de la div image chateau
         let divMainBlocHeader   = $('#main-bloc-header');
 
         //* Puis je récupère dynamiquement la hauteur de divCastleImages (déjà récupérée)
-        // afin de dynamiser la suite du code via vanillaSlideUpMultiple()
+        // ...afin de dynamiser la suite du code via vanillaSlideUpMultiple()
         /** RAPPEL : le sélecteur jQuery "$('')" renvoie toujours un objet
-         * donc divCastleImages.offsetHeight renvoie "undefined"
-         * conole.log(divCastleImages) renvoie "S.fn.init [div#castle-header-images]", soit un tableau
-         * il faut donc parcourir le tableau à l'index désiré pour manipuler les données
+         * ...donc divCastleImages.offsetHeight renvoie "undefined"
+         * ...console.log(divCastleImages) renvoie "S.fn.init [div#castle-header-images]", soit un tableau
+         * ...il faut donc parcourir le tableau à l'index désiré pour manipuler les données
          * */ 
         let hauteurDivCastleImages = divCastleImages[0].offsetHeight;
         /**
          * J'applique une animation pour faire glisser l'élément sans en masquer un autre 
          * J'utilise une fonction custom en Vanilla définie dans le fichier js/utils/vanillaFunctions.js
-         * car la propriété transform contient des valeur non-numériques
-         * or, jQuery .animate() n'accepte que des valeurs numériques
+         * ...car la propriété transform contient des valeur non-numériques
+         * ...or, jQuery .animate() n'accepte que des valeurs numériques
          * 
          * J'insère cette fonction dans un setTimeout
          */

@@ -1,0 +1,1 @@
+Ce répertoire contient toutes les fonctions custom en Vanilla JS pour contourner les limites de jQuery .animate() - valeurs non-numériques.
