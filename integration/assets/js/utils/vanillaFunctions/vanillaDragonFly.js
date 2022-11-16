@@ -2,7 +2,6 @@
 import { durationFlyingDragon } from "../variables/durationVariables.js";
 
 //! STEP 2 = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
 //^ Fonction vanillaDragonFlyingAboveTheCastle()
 /**
  * Le paramètre déclaré dans la déclaration de cette présente fonction aura comme argument
